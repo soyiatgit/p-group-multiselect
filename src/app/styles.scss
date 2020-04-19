@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+
+.filter-wrapper .ui-multiselect .ui-multiselect-panel {
+    min-width: 200px;
+}
+
+.filter-wrapper .ui-multiselect-label-container {
+    min-width: 200px;
+}
+
+.ui-multiselect {
+    width: -webkit-fill-available;
+}
