@@ -5,7 +5,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DropdownModule } from 'primeng/dropdown';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { CheckboxModule } from 'primeng/checkbox';
 import { PGroupMultiselectComponent } from './p-group-multiselect/p-group-multiselect.component';
@@ -21,7 +20,6 @@ import { PGroupMultiselectComponent } from './p-group-multiselect/p-group-multis
     AppRoutingModule,
     FormsModule,
     CheckboxModule,
-    DropdownModule,
     MultiSelectModule
   ],
   providers: [],
