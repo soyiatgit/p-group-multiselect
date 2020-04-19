@@ -1,0 +1,15 @@
+<!-- 
+    @Author: Saurabh Tiwari
+    @Date of Creation: 19-04-2020
+-->
+<p-multiSelect appendTo="body" [filterMatchMode]="'startsWith'" [showToggleAll]="true" [scrollHeight]="'400px'" [options]="options" [(ngModel)]="selectedOptions" (onChange)="onChangeMultiSelect($event)" (onPanelHide)="onMultiSelectPanelHide()">
+    <ng-template pTemplate="selectedItems">
+        <span>{{getSelectedItemsLabel()}}</span>
+    </ng-template>
+    <ng-template let-option let-i="index" pTemplate="item">
+        <span>{{option.label}}</span>
+        <div (click)="onClickChildOptionContainer($event)" class="child-option-checkbox" *ngFor="let childOption of option.value.childOptions">
+            <p-checkbox name="{{option.label}}" [value]="childOption.value" label="{{childOption.label}}" [(ngModel)]="option.value.selectedChildOptions" (click)="onClickChildOptionChecbox($event)" (onChange)="onChangeChildOptionCheckbox(option)"></p-checkbox>
+        </div>
+    </ng-template>
+</p-multiSelect>
